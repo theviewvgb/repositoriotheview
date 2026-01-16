@@ -1,65 +1,263 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Departamento - Villa General Belgrano</title>
-<style>
-body { margin:0; font-family: Arial, sans-serif; color:#333; background:#fafafa; }
-header { width:100%; height:70vh; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; color:white; text-shadow:0 2px 8px rgba(0,0,0,0.6); }
-section { max-width:1100px; margin:auto; padding:40px 20px; }
-h2 { margin-bottom:20px; font-size:28px; }
-.gallery { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); grid-gap:20px; }
-.gallery img { width:100%; border-radius:10px; object-fit:cover; }
-.features ul { list-style:none; padding:0; }
-.features li { margin-bottom:10px; }
-footer { text-align:center; padding:20px; background:#eee; }
-</style>
+  <meta charset="UTF-8">
+  <title>The View | Alquiler Temporario en Villa General Belgrano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Departamento premium en pleno centro de Villa General Belgrano. Hasta 5 personas. Vista a las Sierras Chicas, cochera, parrilla, Wi-Fi y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f2937;
+      --accent: #2563eb;
+      --bg: #f9fafb;
+      --text: #374151;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      min-height: 90vh;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/portada.jpg") center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    header p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      margin: auto;
+      opacity: .95;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,.05);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .service h3 {
+      margin-bottom: .5rem;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      transition: transform .3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* View Section */
+    .view {
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url("images/vista.jpg") center/cover no-repeat;
+      color: #fff;
+      border-radius: 24px;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 4rem 0;
+    }
+
+    .view h2 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .view p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      opacity: .95;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: #fff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    footer p {
+      opacity: .8;
+      font-size: .95rem;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 14px 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,.2);
+      transition: transform .2s ease;
+      z-index: 999;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        min-height: 70vh;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header style="background-image:url('IMG/27.jpg');">
-<h1>DEPARTAMENTO EN VILLA GENERAL BELGRANO</h1>
-</header>
 
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>The View</h1>
+      <p>Departamento de alquiler temporario en pleno centro de Villa General Belgrano.  
+      Hasta 5 personas · Confort premium · Vista a las Sierras Chicas.</p>
+    </div>
+  </header>
 
-<section>
-<p>Ubicado en la calle principal de Villa General Belgrano, este departamento ofrece una vista única a las Sierras Chicas, ambientes modernos y totalmente equipados con la comodidad de estar en pleno centro.</p>
-</section>
+  <!-- SERVICES -->
+  <section class="container">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>🏡 Capacidad</h3>
+        <p>Hasta 5 personas, ideal para familias o grupos.</p>
+      </div>
+      <div class="service">
+        <h3>🚗 Cochera</h3>
+        <p>Ingreso directo desde cochera o entrada principal.</p>
+      </div>
+      <div class="service">
+        <h3>🌄 Balcón con Vista</h3>
+        <p>Balcón con mesa y sillas, vista directa a las Sierras Chicas.</p>
+      </div>
+      <div class="service">
+        <h3>🔥 Parrilla</h3>
+        <p>Patio parquizado con asador, mesa y sillas.</p>
+      </div>
+      <div class="service">
+        <h3>📺 Smart TV 65”</h3>
+        <p>Televisor 4K con acceso a plataformas de streaming.</p>
+      </div>
+      <div class="service">
+        <h3>📶 Wi-Fi & Lavarropas</h3>
+        <p>Internet rápido y equipamiento completo.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- GALLERY -->
+  <section class="container">
+    <h2>Galería de Fotos</h2>
+    <div class="gallery">
+      <!-- Reemplazá los nombres de archivo por tus fotos reales -->
+      <img src="images/foto1.jpg" alt="Departamento - Foto 1">
+      <img src="images/foto2.jpg" alt="Departamento - Foto 2">
+      <img src="images/foto3.jpg" alt="Departamento - Foto 3">
+      <img src="images/foto4.jpg" alt="Departamento - Foto 4">
+      <img src="images/foto5.jpg" alt="Departamento - Foto 5">
+    </div>
+  </section>
 
-<section class="features">
-<h2>Características</h2>
-<ul>
-<li>✔ Hasta 5 personas</li>
-<li>✔ Cochera cubierta</li>
-<li>✔ Balcón con mesa, sillas y excelente vista</li>
-<li>✔ Patio parquizado con asador</li>
-<li>✔ Wi‑Fi</li>
-<li>✔ Smart TV 65"</li>
-<li>✔ Cocina completamente equipada</li>
-<li>✔ Lavarropas</li>
-<li>✔ Acceso principal y por cochera</li>
-</ul>
-</section>
+  <!-- VIEW -->
+  <section class="container">
+    <div class="view">
+      <h2>Vista a las Sierras</h2>
+      <p>
+        Disfrutá de una vista privilegiada a las Sierras Chicas desde el balcón y los espacios
+        exteriores. Un entorno natural único, con la comodidad de estar en pleno centro.
+      </p>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 The View · Villa General Belgrano, Córdoba</p>
+  </footer>
 
-<section>
-<h2>Galería</h2>
-<p>Podrás agregar más imágenes fácilmente en el futuro. Solo sumalas a la carpeta <strong>IMG</strong>.</p>
-<div class="gallery">
-<img src="IMG/10.jpg" alt="Imagen 1" />
-<img src="IMG/09.jpg" alt="Imagen 2" />
-<img src="IMG/08.jpg" alt="Imagen 3" />
-<img src="IMG/05.jpg" alt="Imagen 4" />
-<img src="IMG/20240506_212943.jpg" alt="Imagen 5" />
-<img src="IMG/20240607_184832.jpg" alt="Imagen 6" />
-<img src="IMG/20250214_104414.jpg" alt="Imagen 7" />
-<img src="IMG/20250214_104504.jpg" alt="Imagen 8" />
-<img src="IMG/12.png" alt="Imagen 9" />
-</div>
-</section>
+  <!-- WHATSAPP BUTTON -->
+  <a class="whatsapp" href="https://wa.me/549XXXXXXXXXX" target="_blank">
+    📲 WhatsApp
+  </a>
 
-
-<section>
-<h2>Ubicación</h2>
-<p>Pleno centro de Villa General Belgrano, con acceso inmediato a comercios, gastronomía y paseos tradicionales.</p>
+</body>
+</html>
