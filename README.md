@@ -225,8 +225,8 @@
   <h2>Servicios</h2>
   <div class="services">
     <div class="service"><h3>🏡 Capacidad</h3><p>Hasta 5 personas.</p></div>
-    <div class="service"><h3>🚗 Cochera</h3><p>Ingreso por cochera o entrada principal.</p></div>
-    <div class="service"><h3>🌄 Balcón</h3><p>Mesa y sillas con vista a las sierras.</p></div>
+    <div class="service"><h3>🚗 Cochera</h3><p>Cochera cubierta con ingreso directo al departamento.</p></div>
+    <div class="service"><h3>🌄 Balcón</h3><p>Amplio balcón equipado con mesa y sillas y una vista privilegiada a las sierras.</p></div>
     <div class="service"><h3>🔥 Parrilla</h3><p>Patio parquizado con asador.</p></div>
     <div class="service"><h3>📺 Smart TV 65”</h3><p>Streaming y entretenimiento.</p></div>
     <div class="service"><h3>📶 Wi-Fi & Lavarropas</h3><p>Totalmente equipado.</p></div>
