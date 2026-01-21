@@ -178,11 +178,28 @@
         min-height: 70vh;
       }
     }
+    .cta {
+  margin-top: 2rem;
+  display: inline-block;
+  background: #ffffff;
+  color: #111827;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
   </style>
 </head>
 <script>
   function copiarDireccion() {
-    const direccion = "Julio A. Roca 310, Villa General Belgrano, Córdoba, Argentina";
+    const direccion = "Julio A. Roca 312, Villa General Belgrano, Córdoba, Argentina";
     navigator.clipboard.writeText(direccion).then(() => {
       alert("Dirección copiada al portapapeles");
     });
@@ -225,7 +242,9 @@
     Departamento totalmente equipado para hasta 5 personas en pleno centro de La Villa,
     con balcón, cochera, asador y una vista privilegiada a las Sierras.
   </p>
-
+<a href="#ubicacion" class="cta">
+  📍 Ver ubicación
+</a>
 </header>
 <!-- SERVICES -->
 <section class="container">
@@ -284,7 +303,7 @@
   </h2>
 
   <p style="text-align:center; max-width:700px; margin:0 auto 2rem; color:#555;">
-    Nos encontramos en <strong>Julio A. Roca 310, Villa General Belgrano, Córdoba</strong>,
+    Nos encontramos en <strong>Julio A. Roca 312, Villa General Belgrano, Córdoba</strong>,
     en una ubicación privilegiada con vistas a las Sierras Chicas.
   </p>
 
@@ -316,12 +335,12 @@
 
 <!-- FOOTER -->
 <footer>
-  © 2026 The View · Julio A. Roca 310 · Villa General Belgrano · Córdoba
+  © 2026 The View · Julio A. Roca 312 · Villa General Belgrano · Córdoba
 </footer>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5493546458477" target="_blank">
-  📲 WhatsApp
+  📲 Consultar disponibilidad
 </a>
 <button
   onclick="copiarDireccion()"
