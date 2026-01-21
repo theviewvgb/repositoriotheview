@@ -180,7 +180,14 @@
     }
   </style>
 </head>
-
+<script>
+  function copiarDireccion() {
+    const direccion = "Julio A. Roca 310, Villa General Belgrano, Córdoba, Argentina";
+    navigator.clipboard.writeText(direccion).then(() => {
+      alert("Dirección copiada al portapapeles");
+    });
+  }
+</script>
 <body>
 
 <!-- HERO -->
