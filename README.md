@@ -47,7 +47,7 @@
     /* HERO */
     header {
       min-height: 90vh;
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/portada.jpg") center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/foto19.jpg") center/cover no-repeat;
       color: #fff;
       display: flex;
       align-items: center;
