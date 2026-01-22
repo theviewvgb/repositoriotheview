@@ -5,27 +5,21 @@
   <meta charset="UTF-8">
   <title>The View | Alquiler Temporario en Villa General Belgrano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Departamento de alquiler temporario en Villa General Belgrano. Primer piso sobre JB Calzados. Vista a las sierras, cochera, parrilla y Wi-Fi.">
+  <meta name="description" content="Departamento de alquiler temporario en Villa General Belgrano, ubicado en el primer piso sobre JB Calzados. Vista a las sierras, cochera, parrilla y Wi-Fi.">
 
-  <!-- SCHEMA -->
+  <!-- SEO Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "The View",
-    "description": "Departamento de alquiler temporario ubicado en el primer piso sobre el comercio JB Calzados.",
+    "description": "Departamento de alquiler temporario ubicado en el primer piso sobre JB Calzados.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Julio A. Roca 310",
       "addressLocality": "Villa General Belgrano",
       "addressRegion": "Córdoba",
       "addressCountry": "AR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -31.9777,
-      "longitude": -64.5562
     }
   }
   </script>
@@ -33,87 +27,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: "Inter", sans-serif;
-      margin: 0;
-      background: #f9fafb;
-      color: #374151;
-      line-height: 1.6;
-    }
+    body { font-family: Inter, sans-serif; margin:0; background:#f9fafb; color:#374151; }
+    h2 { text-align:center; margin-bottom:1.5rem; }
+    .container { max-width:1100px; margin:auto; padding:4rem 1.5rem; }
 
     header {
-      min-height: 100vh;
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/foto19.jpg") center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 2.5rem;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
+      min-height:100vh;
+      background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("images/foto19.jpg") center/cover no-repeat;
+      color:#fff; display:flex; flex-direction:column;
+      justify-content:center; align-items:center; text-align:center;
+      padding:2.5rem;
     }
 
     .cta {
-      margin-top: 2rem;
-      background: #fff;
-      color: #111;
-      padding: 0.9rem 2.2rem;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
+      margin-top:2rem;
+      background:#fff; color:#111;
+      padding:0.9rem 2.2rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
     }
 
-    section {
-      padding: 4rem 1rem;
+    .services, .gallery, .testimonials {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      max-width: 1100px;
-      margin: auto;
+    .service, .testimonial {
+      background:#fff;
+      padding:1.5rem;
+      border-radius:18px;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
     }
 
     .gallery img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 16px;
+      width:100%; height:230px;
+      object-fit:cover;
+      border-radius:16px;
+    }
+
+    .view {
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("images/vista.jpg") center/cover no-repeat;
+      color:#fff;
+      padding:4rem 2rem;
+      border-radius:26px;
+      text-align:center;
     }
 
     footer {
-      background: #111827;
-      color: #fff;
-      text-align: center;
-      padding: 2rem;
+      background:#111827;
+      color:#fff;
+      text-align:center;
+      padding:2rem;
     }
 
     .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      z-index: 999;
+      position:fixed;
+      bottom:20px; right:20px;
+      background:#25d366;
+      color:#fff;
+      padding:14px 22px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
     }
   </style>
 
   <script>
     function copiarDireccion() {
       navigator.clipboard.writeText(
-        "Julio A. Roca 310, Villa General Belgrano, Córdoba – Primer piso sobre JB Calzados"
+        "JB Calzados, Julio A. Roca 310, Villa General Belgrano, Córdoba (Primer piso)"
       );
-      alert("Dirección copiada al portapapeles");
+      alert("Dirección copiada");
     }
   </script>
 </head>
@@ -122,13 +108,24 @@
 
 <header>
   <h2>Alquiler temporario en Villa General Belgrano</h2>
-  <p>Departamento totalmente equipado en el primer piso sobre JB Calzados.</p>
+  <p>Departamento para hasta 5 personas, con vista a las sierras y ubicación céntrica.</p>
   <a href="#ubicacion" class="cta">📍 Ver ubicación</a>
 </header>
 
-<!-- GALERÍA -->
-<section>
-  <h2>Galería de Fotos</h2>
+<section class="container">
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="service">🏡 Hasta 5 personas</div>
+    <div class="service">🚗 Cochera cubierta</div>
+    <div class="service">🌄 Balcón con vista</div>
+    <div class="service">🔥 Parrilla y patio</div>
+    <div class="service">📺 Smart TV 65”</div>
+    <div class="service">📶 Wi-Fi completo</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Galería</h2>
   <div class="gallery">
     <img src="images/foto1.jpg">
     <img src="images/foto2.jpg">
@@ -136,47 +133,50 @@
     <img src="images/foto4.jpg">
     <img src="images/foto5.jpg">
     <img src="images/foto6.jpg">
-    <img src="images/foto7.jpg">
-    <img src="images/foto8.jpg">
   </div>
 </section>
 
-<!-- UBICACIÓN -->
-<section id="ubicacion" style="background:#f8f8f8;">
-  <h2>📍 Ubicación</h2>
+<section class="container">
+  <h2>Testimonios</h2>
+  <div class="testimonials">
+    <div class="testimonial">“Vista increíble y excelente ubicación.” — María</div>
+    <div class="testimonial">“Todo impecable, muy recomendable.” — Pablo</div>
+    <div class="testimonial">“Volveríamos sin dudar.” — Laura</div>
+  </div>
+</section>
 
-  <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
-    <strong>Julio A. Roca 310, Villa General Belgrano</strong><br>
-    Departamento ubicado en el <strong>primer piso sobre el comercio JB Calzados</strong>
+<section class="container">
+  <div class="view">
+    <h2>Vista a las Sierras</h2>
+    <p>Disfrutá del paisaje desde el balcón en pleno centro.</p>
+  </div>
+</section>
+
+<section id="ubicacion" class="container">
+  <h2>📍 Ubicación</h2>
+  <p style="text-align:center;">
+    Julio A. Roca 310 – <strong>Primer piso sobre JB Calzados</strong>
   </p>
 
-  <div style="max-width:900px; margin:auto; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,.15);">
+  <div style="border-radius:16px; overflow:hidden;">
     <iframe
       src="https://www.google.com/maps?q=JB+Calzados+Villa+General+Belgrano&z=18&output=embed"
-      width="100%"
-      height="400"
-      style="border:0;"
-      loading="lazy"
-      allowfullscreen>
+      width="100%" height="400" style="border:0;" loading="lazy">
     </iframe>
   </div>
 
   <div style="text-align:center; margin-top:1.5rem;">
-    <button onclick="copiarDireccion()" style="padding:0.7rem 1.4rem; border-radius:30px; border:none; cursor:pointer;">
-      📋 Copiar dirección
-    </button>
+    <button onclick="copiarDireccion()">📋 Copiar dirección</button>
   </div>
 </section>
 
 <footer>
-  © 2026 The View · Primer piso sobre JB Calzados · Villa General Belgrano
+  © 2026 The View · Villa General Belgrano · Córdoba
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5493546458477" target="_blank">
-  📲 Consultar disponibilidad
+  📲 WhatsApp
 </a>
 
 </body>
 </html>
-
-
