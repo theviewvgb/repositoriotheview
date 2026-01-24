@@ -258,21 +258,43 @@
     }
   </script>
 </head>
-<div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
+<div class="lightbox" id="lightbox">
+  <button class="close" onclick="cerrarLightbox()">✕</button>
+  <button class="prev" onclick="cambiarImagen(-1)">❮</button>
   <img id="lightbox-img" src="" alt="Imagen ampliada">
+  <button class="next" onclick="cambiarImagen(1)">❯</button>
 </div>
   <script>
+let imagenes = [];
+let indiceActual = 0;
+
 function abrirLightbox(src) {
-  const lightbox = document.getElementById("lightbox");
-  const img = document.getElementById("lightbox-img");
-  img.src = src;
-  lightbox.style.display = "flex";
+  imagenes = Array.from(document.querySelectorAll(".gallery img"))
+    .map(img => img.src);
+
+  indiceActual = imagenes.indexOf(src);
+
+  document.getElementById("lightbox-img").src = src;
+  document.getElementById("lightbox").style.display = "flex";
 }
 
 function cerrarLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
+
+function cambiarImagen(direccion) {
+  indiceActual += direccion;
+
+  if (indiceActual < 0) {
+    indiceActual = imagenes.length - 1;
+  } else if (indiceActual >= imagenes.length) {
+    indiceActual = 0;
+  }
+
+  document.getElementById("lightbox-img").src = imagenes[indiceActual];
+}
 </script>
+
 <body>
 
 <header>
