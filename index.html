@@ -156,6 +156,47 @@
 .platform .icon {
   font-size: 2rem;
 }
+    .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform .3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item::after {
+  content: "🔍";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  opacity: 0;
+  transition: opacity .3s ease;
+  border-radius: 16px;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
   </style>
 
   <script>
