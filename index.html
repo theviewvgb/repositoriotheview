@@ -197,6 +197,27 @@
 .gallery-item:hover::after {
   opacity: 1;
 }
+    /* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.lightbox:active {
+  cursor: zoom-out;
+}
   </style>
 
   <script>
@@ -208,7 +229,21 @@
     }
   </script>
 </head>
+<div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+</div>
+  <script>
+function abrirLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = src;
+  lightbox.style.display = "flex";
+}
 
+function cerrarLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 <body>
 
 <header>
@@ -290,25 +325,25 @@
 <section class="container">
   <h2>Galería</h2>
   <div class="gallery">
-    <img src="images/foto15.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto16.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto7.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto14.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto1.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto2.jpg" alt="Departamento" loading="lazy">  
-    <img src="images/foto6.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto20.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto4.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto5.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto3.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto9.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto10.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto8.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto11.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto17.png" alt="Departamento" loading="lazy">
-    <img src="images/foto18.png" alt="Departamento" loading="lazy">
-    <img src="images/foto12.jpg" alt="Departamento" loading="lazy">
-    <img src="images/foto13.jpg" alt="Departamento" loading="lazy">
+    <img src="images/foto15.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto16.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto7.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto14.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto1.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto2.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">  
+    <img src="images/foto6.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto20.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto4.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto5.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto3.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto9.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto10.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto8.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto11.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto17.png" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto18.png" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto12.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
+    <img src="images/foto13.jpg" alt="Departamento" loading="lazy" onclick="abrirLightbox(this.src)">
   </div>
 </section>
 
