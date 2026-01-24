@@ -232,6 +232,32 @@
 .lightbox:active {
   cursor: zoom-out;
 }
+  <style>
+/* LIGHTBOX CONTROLS */
+.lightbox button {
+  position: absolute;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.lightbox button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.lightbox .prev { left: 30px; }
+.lightbox .next { right: 30px; }
+.lightbox .close {
+  top: 25px;
+  right: 25px;
+  font-size: 2rem;
+}
+</style>
   </style>
 
   <script>
