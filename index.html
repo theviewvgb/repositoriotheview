@@ -270,6 +270,46 @@
   right: 25px;
   font-size: 2rem;
 }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-item {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-item .icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 
   <script>
@@ -492,7 +532,40 @@ function cambiarImagen(direccion) {
     <button onclick="copiarDireccion()">📋 Copiar dirección</button>
   </div>
 </section>
+<section class="container contact" id="contacto">
+  <h2>📞 Contacto</h2>
 
+  <div class="contact-grid">
+
+    <div class="contact-item">
+      <span class="icon">📸</span>
+      <h3>Instagram</h3>
+      <a href="https://www.instagram.com/theview_vgb" target="_blank">
+        @theview_vgb
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <span class="icon">✉️</span>
+      <h3>Email</h3>
+      <a href="mailto:hendersoninmobiliaria@gmail.com">
+        hendersoninmobiliaria@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <span class="icon">💬</span>
+      <h3>WhatsApp</h3>
+      <a href="https://wa.me/5493546401001" target="_blank">
+        +54 9 3546 401001
+      </a><br>
+      <a href="https://wa.me/5493546458477" target="_blank">
+        +54 9 3546 458477
+      </a>
+    </div>
+
+  </div>
+</section>
 <footer>
   © 2026 The View · Villa General Belgrano · Córdoba
 </footer>
